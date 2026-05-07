@@ -6,8 +6,8 @@ body{
 .container{
     margin: auto;
     box-shadow: 0px 0px 5px black;
-    width: 24%;
-    height: 66vh;
+    width: 25%;
+    height: 75vh;
     border-radius: 10px;
 }
 
@@ -39,14 +39,27 @@ body{
 }
 
 /* Text Scores */
-#score{
+#scoreBoard{
     font-size: 25px;
     font-style: italic;
 }
 
-/* The Score Board */
-#scoreBoard{
-    margin-top: -30%;
+/* All the Scores */
+.Scores{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -7%;
+}
+
+.signs{
+    margin-top: -15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.showResults{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -54,7 +67,7 @@ body{
     box-shadow: 0px 0px 5px gray;
     text-align: center;
     font-size: 20px;
-}
+} 
 
 /* Reset Button */
 #reset{

@@ -1,15 +1,11 @@
-// The Red Heart Button with Function
+// The ScoreBoard counters Variables;
+let Correct = 0;
 
-// The Counter Variable;
-let count = 0;
-
-let errors = 0;
+let Errors = 0;
 
 let Attempts = 0; 
 
-function Reset(){
-    
-}
+
 
 function Red(){
 
@@ -17,7 +13,7 @@ function Red(){
 let computerGuess = Math.random();
 console.log(computerGuess);
 
-// Compare the random number to display a Heart colour depending on the value (0 to 0.49 is Red Heart) == (0.5 to 1 is Black Heart)
+// Compare the random number to display a Heart colour depending on the value (0 to 0.49 is Red Heart) and (0.5 to 1 is Black Heart).
 let Display = '';
 if (computerGuess >= 0 && computerGuess < 0.5) {
     Display = '❤️';
@@ -29,27 +25,37 @@ let displaySpace = document.getElementById('display');
 displaySpace.value = Display;
 console.log(Display);
 
-// The Scores Counter
-let ScoreBoard = document.getElementById('scoreBoard');
 
-// Compare if your clicked button is the same as the computer,the Scores incresses by 1;
-if (Display === '❤️') {
-    count++;
-    console.log(count);
-    ScoreBoard.value = count;
+// Compare if your clicked button is the same as the computer predicted then Correct incresses by 1 Else Error incresses by 1. Add both and display as Attempts;
+if(Display === '❤️') {
+    Correct++;
+    console.log(Correct);
     
 }else {
-    errors++;
+    Errors++;
+    console.log(Errors);
 }
 
-Attempts = count + errors;
-document.getElementById('attempts').innerHTML = Attempts;
+Attempts = Correct + Errors;
+console.log(Attempts);
 
-document.getElementById('error').innerHTML = errors;
+// The Correct Counter display variable.
+let correctCounter = document.getElementById('corrects');
+correctCounter.value = Correct;
 
-// Show your Scores in the Score Board;
-document.getElementById('scoreBoard').innerHTML = ScoreBoard.value;
+
+// The Error Counter display variable.
+let errorCounter = document.getElementById('errors');
+errorCounter.value = Errors;
+
+// The Attempt Counter display variable.
+let attemptCounter = document.getElementById('attempts');
+attemptCounter.value = Attempts;
+
 }
+
+
+
 
 
 
@@ -60,7 +66,7 @@ function Black(){
 let computerGuess = Math.random();
 console.log(computerGuess);
 
-// Compare the random number to display a Heart colour depending on the value (0 to 0.49 is Red Heart) == (0.5 to 1 is Black Heart)
+// Compare the random number to display a Heart colour depending on the value (0 to 0.49 is Red Heart) and (0.5 to 1 is Black Heart).
 let Display = '';
 if (computerGuess >= 0 && computerGuess < 0.5) {
     Display = '❤️';
@@ -72,25 +78,41 @@ let displaySpace = document.getElementById('display');
 displaySpace.value = Display;
 console.log(Display);
 
-// The Scores Counter
-let ScoreBoard = document.getElementById('scoreBoard');
 
-// Compare if your clicked button is the same as the computer,the Scores incresses by 1;
-if (Display === '🖤') {
-    count++;
-    console.log(count);
-    ScoreBoard.value = count;
+// Compare if your clicked button is the same as the computer predicted then Correct incresses by 1 Else Error incresses by 1. Add both and display them  as number Attempts;
+if(Display === '🖤') {
+    Correct++;
+    console.log(Correct);
     
 }else {
-    errors++;
+    Errors++;
+    console.log(Errors);
 }
 
-Attempts = count + errors;
-document.getElementById('attempts').innerHTML = Attempts;
+Attempts = Correct + Errors;
+console.log(Attempts);
 
-document.getElementById('error').innerHTML = errors;
+// The Correct Counter display variable.
+let correctCounter = document.getElementById('corrects');
+correctCounter.value = Correct;
 
-// Show your Scores in the Score Board;
-document.getElementById('scoreBoard').innerHTML = ScoreBoard.value;
+
+// The Error Counter display variable.
+let errorCounter = document.getElementById('errors');
+errorCounter.value = Errors;
+
+// The Attempt Counter display variable.
+let attemptCounter = document.getElementById('attempts');
+attemptCounter.value = Attempts;
+
 
 }
+
+// The Reset Button
+function Reset(){
+    Correct = 0;
+    Errors = 0;
+    Attempts = 0;
+}
+
+

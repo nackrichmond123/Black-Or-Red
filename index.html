@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colour Guessing</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Responsiveness.css">
 </head>
 <body>
+    <!-- <script>alert('Click the Black or Red Button to Play the Game')</script> -->
     <h1>Colour Guess</h1>
     <div class="container"><br>
         <input type="text" id="display" readonly value="🤍"><br><br>
@@ -15,16 +17,24 @@
         OR
         <button class="btn" id="black" title="Choose Black Heart" onclick="Black()">Black</button>
 
-        <h3 id="score">Score</h3>
-        <input type="text" readonly id="scoreBoard" placeholder="0" ><br><br>
+        <h3 id="scoreBoard">ScoreBoard</h3>
+        <div class="signs">
+            <h1>❌</h1>
+            <h1>✅</h1>
+            <h1>🔢</h1>
+        </div>
+        <div class="Scores">
+            <input type="text" class="showResults" readonly id="errors" placeholder="0" value="0">
+
+            <input type="text" class="showResults" readonly id="corrects" placeholder="0" value="0">
+
+            <input type="text" class="showResults" readonly id="attempts" placeholder="0" value="0">
+
+        </div><br><br>
+
+
         <button id="reset" onclick="Reset()">Restart</button>
     </div>
-
-    <p>Errors</p>
-    <p id="error"></p>
-
-    <p>Attempts</p>
-    <p id="attempts"></p>    
 
     <script src="index.js"></script>
 </body>

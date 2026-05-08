@@ -6,6 +6,22 @@
 
 @media (max-width:480px) {
     .container{
-        width: 60%;
+        width: 95%;
+        height: 85vh;
+    }
+
+    #display{
+        width: 42%;
+        height: 28vh;
+        text-align: center;
+        font-size: 140px;
+    }
+
+    #scoreBoard{
+        margin-bottom: 50px;
+    }
+
+    .signs{
+        margin-bottom: 20px;
     }
 }
